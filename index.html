@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link  rel="stylesheet"  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> 
     <link rel="stylesheet" href="css/style.css" />
+    
     <title>Garden City</title>
   </head>
   <body>
@@ -45,7 +46,7 @@
               <img src="img/Block_01/02.jpg" alt="woman" class="img-header__image">
             </div>
             <div class="header__contant contant-header">
-              <div class="contant-header__title">A BEAUTIFUL DAY IS IN BLOOM</div>
+              <div class="contant-header__title title">A BEAUTIFUL DAY IS IN BLOOM</div>
               <div class="contant-header__text">Welcome to Garden City Center, a destination for old favorites, new discoveries and everyday delights.</div>
               <div class="contant-header__img">
                 <img src="img/Block_01/03.png" alt="directory" class="contant-img">
@@ -55,9 +56,127 @@
         </div>
       </header>
       <!-- /.header -->
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../js/slick.min.js"></script>
+
+      <section class="slider-top">
+        <!-- Главный контейнер слайдера -->
+        <div class="slider-top__container swiper">
+          <!-- Обязательная оболочка -->
+          <div class="slider-top__wrapper swiper-wrapper">
+
+            <!-- Контент внутри слайда -->
+            <div class="slider-top__slide swiper-slide">
+              <div class="slide-slider-top__image">
+                <img src="img/Block_02/01.jpg" alt="Crate & Barrel">
+              </div>
+              <h3 class="slide-slider-top__subtitle">Explore</h3>
+              <div class="slide-slider-top__title">Crate & Barrel</div>
+              <div class="slide-slider-top__item">
+                <a href="#" class="slide-slider-top__link">Learn More</a>
+                <!-- <svg class="icon-line" width="116" height="5" viewBox="0 0 116 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 1C3.625 1 3.625 4 7.25 4C10.875 4 10.875 1 14.5 1C18.125 1 18.125 4 21.75 4C25.375 4 25.375 1 29 1C32.625 1 32.625 4 36.25 4C39.875 4 39.875 1 43.5 1C47.125 1 47.125 4 50.75 4C54.375 4 54.375 1 58 1C61.625 1 61.625 4 65.25 4C68.875 4 68.875 1 72.5 1C76.125 1 76.125 4 79.75 4C83.375 4 83.375 1 87 1C90.625 1 90.625 4 94.25 4C97.875 4 97.875 1 101.5 1C105.125 1 105.125 4 108.75 4C112.375 4 112.375 1 116 1C119.625" stroke="white" stroke-width="1.75"/> 
+                </svg> -->
+              </div>
+            </div>
+            <div class="slider-top__slide swiper-slide">
+              <div class="slide-slider-top__image">
+                <img src="img/Block_02/02.jpg" alt="Crate & Barrel">
+              </div>
+              <h3 class="slide-slider-top__subtitle">News & Press</h3>
+              <div class="slide-slider-top__title">Dine safely at <br> Garden City Center</div>
+              <div class="slide-slider-top__item">
+                <a href="#" class="slide-slider-top__link">Learn More</a>                
+                  <!-- <svg class="icon-line" width="116" height="5" viewBox="0 0 116 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 1C3.625 1 3.625 4 7.25 4C10.875 4 10.875 1 14.5 1C18.125 1 18.125 4 21.75 4C25.375 4 25.375 1 29 1C32.625 1 32.625 4 36.25 4C39.875 4 39.875 1 43.5 1C47.125 1 47.125 4 50.75 4C54.375 4 54.375 1 58 1C61.625 1 61.625 4 65.25 4C68.875 4 68.875 1 72.5 1C76.125 1 76.125 4 79.75 4C83.375 4 83.375 1 87 1C90.625 1 90.625 4 94.25 4C97.875 4 97.875 1 101.5 1C105.125 1 105.125 4 108.75 4C112.375 4 112.375 1 116 1C119.625" stroke="white" stroke-width="1.75"/> 
+                  </svg> -->
+                  
+              </div>
+            </div>
+            <div class="slider-top__slide swiper-slide">
+              <div class="slide-slider-top__image">
+                <img src="img/Block_02/03.jpg" alt="Crate & Barrel">
+              </div>
+              <span class="slide-slider-top__subtitle">Feature</span>
+              <div class="slide-slider-top__title">Our History</div>
+              <div class="slide-slider-top__item">
+                <a href="#" class="slide-slider-top__link">Learn More</a>
+                <!-- <svg class="icon-line" width="116" height="5" viewBox="0 0 116 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 1C3.625 1 3.625 4 7.25 4C10.875 4 10.875 1 14.5 1C18.125 1 18.125 4 21.75 4C25.375 4 25.375 1 29 1C32.625 1 32.625 4 36.25 4C39.875 4 39.875 1 43.5 1C47.125 1 47.125 4 50.75 4C54.375 4 54.375 1 58 1C61.625 1 61.625 4 65.25 4C68.875 4 68.875 1 72.5 1C76.125 1 76.125 4 79.75 4C83.375 4 83.375 1 87 1C90.625 1 90.625 4 94.25 4C97.875 4 97.875 1 101.5 1C105.125 1 105.125 4 108.75 4C112.375 4 112.375 1 116 1C119.625" stroke="white" stroke-width="1.75"/>
+                </svg> -->
+              </div>
+            </div>
+
+          </div>
+
+          <div class="slider-top-button__prev swiper-button-prev"></div>
+          <div class="slider-top-button__next swiper-button-next"></div>
+
+        </div>
+
+        <!-- Добавляем если нам нужны стрелки управления -->
+       
+
+        <!-- Добавляем еслм нам нужна пагинация -->
+        <div class="slider-top__pagination"></div>
+
+        <!-- Добавляем если нам нужна прокрутка (scrollbar) -->
+        <div class="slider-top__scrollbar"></div>
+      </section>
+      <!-- /.slider-top -->
+
+      <section class="cards">
+        <div class="cards__container">
+          <div class="cards__columns columns-cards">
+            <div class="columns-cards__left">
+              <div class="columns-cards__item">
+                <div class="item-cards__title title">Let's Go</div>
+              </div>
+              <div class="columns-cards__item">
+                <div class="item-cards__img ">
+                  <img src="img/Block_03/01.jpg" alt="glass">
+                </div>
+                <div class="item-cards__name">Food & Drink</div>
+              </div>
+              <div class="columns-cards__item">
+                <div class="item-cards__img _card-img">
+                  <img src="img/Block_03/03.jpg" alt="phone">
+                </div>
+                <div class="item-cards__name">Home</div>
+              </div>
+              <div class="columns-cards__item">
+                <div class="item-cards__img">
+                  <img src="img/Block_03/05.jpg" alt="nature">
+                </div>
+                <div class="item-cards__name">Offices</div>
+              </div>
+            </div>
+            <div class="columns-cards__right">
+              <div class="columns-cards__item">
+                <div class="item-cards__img _card-img">
+                  <img src="img/Block_03/02.jpg" alt="woman">
+                </div>
+                <div class="item-cards__name">Fashion & Style</div>
+              </div>
+              <div class="columns-cards__item">
+                <div class="item-cards__img">
+                  <img src="img/Block_03/04.jpg" alt="beauty">
+                </div>
+                <div class="item-cards__name">Health & Beauty</div>
+              </div>
+              <div class="columns-cards__item">
+                <div class="item-cards__img _card-img">
+                  <img src="img/Block_03/06.jpg" alt="bouquet">
+                </div>
+                <div class="item-cards__name">Specialty & Services</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cards__backgraund">
+          <img src="img/Block_03/backgraund_03.svg" alt="leaves">
+        </div>
+      </section>
+    </div>    
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
