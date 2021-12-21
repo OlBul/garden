@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 @font-face {
   font-family: "icons";
-  src: url("../../fonts/icons.ttf?91lax8") format("truetype"), url("../../fonts/icons.woff?91lax8") format("woff"), url("../../fonts/icons.svg?91lax8#icons") format("svg");
+  src: url("../fonts/icons.ttf?91lax8") format("truetype"), url("../fonts/icons.woff?91lax8") format("woff"), url("../fonts/icons.svg?91lax8#icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -157,7 +157,7 @@ body.lock {
 }
 
 .header {
-  background: url("../../img/Block_01/01.jpg") 0 0/cover no-repeat;
+  background: url("../img/Block_01/01.jpg") 0 0/cover no-repeat;
   position: relative;
   padding: 0 0 44px 25px;
 }
