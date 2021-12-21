@@ -1,35 +1,29 @@
 let burgerMenu = document.querySelector('.header__burger');
 let headerNav = document.querySelector('.header__nav');
 let body = document.querySelector('body');
+let listHeaderLinks = document.querySelectorAll('.list-header__link');
 burgerMenu.addEventListener('click', function () {
     burgerMenu.classList.toggle('active');
     headerNav.classList.toggle('active');
     body.classList.toggle('lock');
+});
+
+
+
+console.log(listHeaderLinks);
+
+listHeaderLinks.forEach ((listHeaderLink) => {
+    listHeaderLink.addEventListener('click', () => {
+        headerNav.classList.remove('active');
+        body.classList.remove('lock');
+        burgerMenu.classList.toggle('active');
+    })
 })
+    
 
 // Swiper Slider =====================================================
-
-/*const sliderTop = new Swiper('.swiper', {
-    
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    autoHeigth: true,
-    slidesPerView: 3,
-    watchOverflow: true,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    //centeredSlides: true,
-
-});*/
-
 const swiperTop = new Swiper('.slider-top__container', {
-    // Optional parameters
-    //direction: 'vertical',
-    //loop: true,    
-   
+       
     // Navigation arrows
     navigation: {
       nextEl: '.slider-top-button__next',
@@ -88,3 +82,27 @@ const swiperTop = new Swiper('.slider-top__container', {
   //swiper2.unit(el);
 
   
+
+
+  const arrowLink = document.querySelectorAll('.arrow__link[data-goto]');
+
+if ( arrowLink.length > 0) {
+    arrowLink.forEach (arrow => {
+        arrow.addEventListener('click', onMenuLinkClick);
+    });
+
+    function onMenuLinkClick(e) {
+        const arrow = e.target;
+
+        if (arrow.dataset.goto && document.querySelector(arrow.dataset.goto)) {
+            const gotoBlock = document.querySelector(arrow.dataset.goto);
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+            
+            window.scrollTo({
+                top: gotoBlockValue,
+                behavior: 'smooth'
+            });
+            e.preventDefault();
+        }
+    }
+}

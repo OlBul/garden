@@ -148,6 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+  position: relative;
   font-family: "Roboto";
   font-weight: 500;
 }
@@ -802,7 +803,9 @@ body.lock {
 
 .slider-bottom__title {
   font-weight: 700;
-  font-size: 44px;
+  font-size: -webkit-calc(24px + 20 * ((100vw - 320px) / 1120));
+  font-size: -moz-calc(24px + 20 * ((100vw - 320px) / 1120));
+  font-size: calc(24px + 20 * ((100vw - 320px) / 1120));
   line-height: 70px;
   text-align: center;
   letter-spacing: 5.12px;
@@ -812,7 +815,9 @@ body.lock {
 
 .slider-bottom__text {
   font-weight: 400;
-  font-size: 18px;
+  font-size: -webkit-calc(15px + 3 * ((100vw - 320px) / 1120));
+  font-size: -moz-calc(15px + 3 * ((100vw - 320px) / 1120));
+  font-size: calc(15px + 3 * ((100vw - 320px) / 1120));
   line-height: 33px;
   text-align: center;
   letter-spacing: 0.21px;
@@ -997,6 +1002,38 @@ body.lock {
 }
 .bottom-footer__link:hover {
   color: #91AFB0;
+}
+
+.arrow__up {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 15;
+  display: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(153, 148, 148, 0.7);
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.arrow__link {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 @media (max-width: 991.98px) {
@@ -1228,6 +1265,24 @@ body.lock {
     line-height: 28px;
   }
 
+  .slider__bottom {
+    padding: 50px 0;
+  }
+
+  .slider-bottom__title {
+    line-height: 48px;
+    margin: 0 0 15px 0;
+  }
+
+  .slider-bottom__text {
+    line-height: 24px;
+    margin: 0 0 15px 0;
+  }
+
+  .slider-bottom__subtext {
+    margin: 0 0 15px 0;
+  }
+
   .swiper-button-next {
     right: 0;
     -webkit-border-radius: 54px 0px 0px 54px;
@@ -1272,6 +1327,14 @@ body.lock {
 
   .center-footer__link {
     line-height: 15px;
+  }
+
+  .arrow__up {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 @media (max-width: 599.98px) {

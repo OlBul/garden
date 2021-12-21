@@ -48,6 +48,7 @@ $md5: 479.98;
 }
 
 body {
+    position: relative;
     font-family: $fontFamily;
     font-weight: $fontWeight;  
     &.lock {
@@ -495,7 +496,7 @@ body {
 }
 .slider-bottom__title {
     font-weight: 700;
-    font-size: 44px;
+    @include adaptiv-font(44, 24);  
     line-height: 70px;    
     text-align: center;
     letter-spacing: 5.12px;
@@ -504,7 +505,7 @@ body {
 }
 .slider-bottom__text {
     font-weight: 400;
-    font-size: 18px;
+    @include adaptiv-font(18, 15);
     line-height: 33px;
     text-align: center;
     letter-spacing: 0.21px;
@@ -675,6 +676,24 @@ body {
         color: #91AFB0;
     }
 }
+
+// ====== arrow__up ================================================================================================
+.arrow__up {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 15;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(153, 148, 148, 0.7);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.arrow__link {  
+    display: inline-flex;
+}
 //===================================================================================================================
 
 @media (max-width: $md2+px) {
@@ -793,16 +812,12 @@ body {
         height: 100%;
         padding: 100px 0 0 0;
         background-color: #171C8F;
-        background: url('../../img/Block_01/Back-iPad.jpg')0 0/cover no-repeat;
-        //transform: translateY(-100%); 
+        background: url('../../img/Block_01/Back-iPad.jpg')0 0/cover no-repeat;        
         z-index: 8;
         overflow: auto;
     }
     .nav-header.active {
-        top: 0;   
-       // background-color: #171C8F;
-        
-       // transform: translateY(0);      
+        top: 0;           
     }
     .list-header {
         position: relative;
@@ -822,8 +837,7 @@ body {
     }
     .contant-header__img {
         display: none;
-    }  
-    
+    }     
 
     // ========= cards ====================================================================================
     .columns-cards__item {
@@ -864,7 +878,21 @@ body {
         line-height: 28px;
     } 
 
+    .slider__bottom {
+        padding: 50px 0;
+    }
 
+    .slider-bottom__title {        
+        line-height: 48px;           
+        margin: 0 0 15px 0;
+    }
+    .slider-bottom__text {        
+        line-height: 24px;        
+        margin: 0 0 15px 0;
+    }
+    .slider-bottom__subtext {                 
+        margin: 0 0 15px 0;
+    }
     
     .swiper-button-next {    
         right: 0;  
@@ -897,6 +925,12 @@ body {
     .center-footer__link {
         line-height: 15px;
     }    
+
+    // ======= arrow__up ======================================================================================
+    .arrow__up {
+        display: flex;
+    }
+
 }
 
 @media (max-width: $md4+px) {

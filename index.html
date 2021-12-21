@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header" id="header">
         <div class="header__backgraund">
           <img src="img/Block_01/04.png" alt="list" class="backgraund-header__img">
         </div>
@@ -21,19 +21,19 @@
             <nav class="header__nav nav-header">
               <ul class="header__list list-header">
                 <li class="list-header__item">
-                  <a href="#" class="list-header__link">Explore</a>
+                  <a href="#crate&barrel" class="list-header__link">Explore</a>
                 </li>
                 <li class="list-header__item">
-                  <a href="#" class="list-header__link">Events</a>
+                  <a href="#events" class="list-header__link">Events</a>
                 </li>
                 <li class="list-header__item">
-                  <a href="#" class="list-header__link">Community</a>
+                  <a href="#community" class="list-header__link">Community</a>
                 </li>
                 <li class="list-header__item">
-                  <a href="#" class="list-header__link">About</a>
+                  <a href="#about" class="list-header__link">About</a>
                 </li>
                 <li class="list-header__item">
-                  <a href="#" class="list-header__link">Contact</a>
+                  <a href="#contact" class="list-header__link">Contact</a>
                 </li>
               </ul>
             </nav>
@@ -57,7 +57,7 @@
       </header>
       <!-- /.header -->
 
-       <section class="slider-top">
+       <section class="slider-top" id="crate&barrel">
        <!-- Главный контейнер слайдера -->
         <div class="slider-top__container swiper">
           <!-- Обязательная оболочка -->
@@ -159,7 +159,7 @@
       </section>
       <!-- /.slider-top -->
 
-      <section class="cards">
+      <section class="cards" id="events">
         <div class="cards__container">
           <div class="cards__columns columns-cards">
             <div class="columns-cards__left">
@@ -213,7 +213,7 @@
       </section>
       <!-- /.cards -->
 
-      <section class="hotel">
+      <section class="hotel" id="about">
         <div class="hotel__backgraund">
           <img src="img/Block_04/backgraund_04.svg" alt="flower">
         </div>
@@ -262,7 +262,7 @@
       </section>
       <!-- /.strip -->
 
-      <section class="slider-bottom">
+      <section class="slider-bottom" id="community">
         <div class="slider-bottom__contant">
           <div class="slider-bottom__title">Around here lately</div>
           <p class="slider-bottom__text">We're always up to something good. Follow along and don't miss a minute.</p>
@@ -317,7 +317,7 @@
       </section>
       <!-- /.slider-bottom -->
 
-      <footer class="footer">
+      <footer class="footer" id="contact">
         <div class="footer__top top-footer">
           <div class="footer__container">
             <div class="top-footer__contant">
@@ -410,6 +410,15 @@
         </div>
       </footer>
       <!-- /.footer -->
+
+      <div class="arrow__up">
+        <a href="#" class="arrow__link" data-goto='.haeder'>
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 40V8" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 22L24 8L38 22" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>            
+        </a>
+      </div>
     </div>    
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
