@@ -25,25 +25,22 @@ burgerMenu.addEventListener('click', function () {
 
 });*/
 
-const swiperTop = new Swiper('.swiper1', {
+const swiperTop = new Swiper('.slider-top__container', {
     // Optional parameters
     //direction: 'vertical',
-    //loop: true,
-    pagination: '.swiper-pagination1',
-    paginationClickable: true,
+    //loop: true,    
    
     // Navigation arrows
     navigation: {
-      nextEl: '._icon-next',
-      prevEl: '._icon-preview',
+      nextEl: '.slider-top-button__next',
+      prevEl: '.slider-top-button__prev',
     },
 
     autoHeigth: true,
     slidesPerView: 3,
     watchOverflow: true,
     spaceBetween: 45,
-    slidesPerGroup: 1,
-
+    //slidesPerGroup: 1,
     breakpoints: {
         320: {
             slidesPerView: 1
@@ -54,39 +51,24 @@ const swiperTop = new Swiper('.swiper1', {
         992: {
             slidesPerView: 3
         },
-    }
-
-   // preloadImages: false,
-
-    /*lazy: {
-        loadONTransitionStart: false,
-        loadPrevNext: false,
-    },*/
-
-    //watchSlidesProgress: true,
-   // watchSlidesVisibility: true,
-  
+    }     
     
-  });
+  });  
 
-  const swiperBottom = new Swiper('.swiper2', {
-    // Optional parameters
-    //direction: 'vertical',
-    //loop: true,
-    pagination: '.swiper-pagination2',
-    paginationClickable: true,
+  const swiperBottom = new Swiper('.slider-bottom__container', {
+    // Optional parameters    
    
     // Navigation arrows
     navigation: {
-      nextEl: '._icon-next',
-      prevEl: '._icon-preview',
+      nextEl: '.slider-bottom-button__next',
+      prevEl: '.slider-bottom-button__prev',
     },
 
     autoHeigth: true,
     slidesPerView: 4,
     watchOverflow: true,
-    spaceBetween: 45,
-    slidesPerGroup: 1,
+    spaceBetween: 45 ,
+   // slidesPerGroup: 1,
 
     breakpoints: {
         320: {
@@ -98,17 +80,11 @@ const swiperTop = new Swiper('.swiper1', {
         992: {
             slidesPerView: 3
         },
-    }
-
-   // preloadImages: false,
-
-    /*lazy: {
-        loadONTransitionStart: false,
-        loadPrevNext: false,
-    },*/
-
-    //watchSlidesProgress: true,
-   // watchSlidesVisibility: true,
-  
+    }  
     
   });
+ // swiperBottom.slidesPerView = '4';
+ // swiper2.slidesPerView.unit(4)
+  //swiper2.unit(el);
+
+  
