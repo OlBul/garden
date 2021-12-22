@@ -657,13 +657,29 @@ body {
         flex: 0 0 50%;
     }
 
-    // ====== slider-top ======================================================================================
+    // ====== slider-top / slider-bottom ======================================================================================
     .slider-top__slide {
         align-items: center;
     }
-
+    .swiper-button-next {    
+        right: 0;  
+        border-radius:  54px 0px 0px 54px;
+        padding: 26px 17px 26px 26px;    
+    }
+    .swiper-button-prev {    
+        left: 0;   
+        border-radius: 0px 54px 54px 0px;
+        padding: 26px 26px 26px 17px;   
+    }
+    .swiper-button-prev,
+    .swiper-button-next {          
+    &::before {
+        contant: '';
+        font-size: 18px;
+        color: #000000;
+    }    
+}
     // ======= cards ==========================================================================================
-
     .columns-cards__item {
         margin: 0 0 80px 0;
     }
@@ -673,7 +689,11 @@ body {
                 margin: 0 0 80px 0;
             }
         }
-    }    
+    }  
+    // ========= hotel =======================================================================================
+    .subtitle {
+        line-height: 50px;
+    }  
 }
 
 @media (max-width: $md3+px) {
@@ -744,11 +764,11 @@ body {
     }
     .header__logo {
         position: relative;
-        z-index: 10;
+        z-index: 13;
     }
     .header__burger {
         position: relative;
-        z-index: 10;
+        z-index: 13;
     }
     .nav-header {
         position: fixed;
@@ -759,7 +779,7 @@ body {
         padding: 100px 0 0 0;
         background-color: #171C8F;
         background: url('../../img/Block_01/Back-iPad.jpg')0 0/cover no-repeat;        
-        z-index: 8;
+        z-index: 12;
         overflow: auto;
     }
     .nav-header.active {
@@ -837,24 +857,6 @@ body {
     .slider-bottom__subtext {                 
         margin: 0 0 15px 0;
     }    
-    .swiper-button-next {    
-        right: 0;  
-        border-radius:  54px 0px 0px 54px;
-        padding: 26px 17px 26px 26px;    
-    }
-    .swiper-button-prev {    
-        left: 0;   
-        border-radius: 0px 54px 54px 0px;
-        padding: 26px 26px 26px 17px;   
-    }
-    .swiper-button-prev,
-    .swiper-button-next {          
-    &::before {
-        contant: '';
-        font-size: 18px;
-        color: #000000;
-    }    
-}
 
     // ======= footer ========================================================================================
     .center-footer__columns {        
