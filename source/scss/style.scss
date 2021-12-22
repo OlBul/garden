@@ -756,7 +756,7 @@ body {
             width: 100%;
             background-color: #171C8F;
             height: 80px;
-            z-index: 10;
+            z-index: 14;
         }      
     }
     .header {
@@ -764,11 +764,11 @@ body {
     }
     .header__logo {
         position: relative;
-        z-index: 13;
+        z-index: 15;
     }
     .header__burger {
         position: relative;
-        z-index: 13;
+        z-index: 15;
     }
     .nav-header {
         position: fixed;
