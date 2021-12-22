@@ -2,15 +2,14 @@ let burgerMenu = document.querySelector('.header__burger');
 let headerNav = document.querySelector('.header__nav');
 let body = document.querySelector('body');
 let listHeaderLinks = document.querySelectorAll('.list-header__link');
+
+// =========== Burger menu ==========================================================================================
+
 burgerMenu.addEventListener('click', function () {
     burgerMenu.classList.toggle('active');
     headerNav.classList.toggle('active');
     body.classList.toggle('lock');
 });
-
-
-
-console.log(listHeaderLinks);
 
 listHeaderLinks.forEach ((listHeaderLink) => {
     listHeaderLink.addEventListener('click', () => {
@@ -18,10 +17,9 @@ listHeaderLinks.forEach ((listHeaderLink) => {
         body.classList.remove('lock');
         burgerMenu.classList.toggle('active');
     })
-})
-    
+});
 
-// Swiper Slider =====================================================
+// ==== Swiper Slider ===============================================================================================
 const swiperTop = new Swiper('.slider-top__container', {
        
     // Navigation arrows
@@ -29,12 +27,10 @@ const swiperTop = new Swiper('.slider-top__container', {
       nextEl: '.slider-top-button__next',
       prevEl: '.slider-top-button__prev',
     },
-
     autoHeigth: true,
     slidesPerView: 3,
     watchOverflow: true,
-    spaceBetween: 45,
-    //slidesPerGroup: 1,
+    spaceBetween: 45,    
     breakpoints: {
         320: {
             slidesPerView: 1
@@ -46,12 +42,9 @@ const swiperTop = new Swiper('.slider-top__container', {
             slidesPerView: 3
         },
     }     
-    
   });  
 
-  const swiperBottom = new Swiper('.slider-bottom__container', {
-    // Optional parameters    
-   
+  const swiperBottom = new Swiper('.slider-bottom__container', {  
     // Navigation arrows
     navigation: {
       nextEl: '.slider-bottom-button__next',
@@ -61,9 +54,7 @@ const swiperTop = new Swiper('.slider-top__container', {
     autoHeigth: true,
     slidesPerView: 4,
     watchOverflow: true,
-    spaceBetween: 45 ,
-   // slidesPerGroup: 1,
-
+    spaceBetween: 45,
     breakpoints: {
         320: {
             slidesPerView: 1
@@ -74,35 +65,22 @@ const swiperTop = new Swiper('.slider-top__container', {
         992: {
             slidesPerView: 3
         },
-    }  
-    
+    }    
   });
- // swiperBottom.slidesPerView = '4';
- // swiper2.slidesPerView.unit(4)
-  //swiper2.unit(el);
-
   
+// ========= arrow up =============================================================================================
+  
+  const arrowUp = document.querySelector('.arrow__up');
 
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 700) {
+        arrowUp.classList.remove('arrow__up_hiden');
+      } else if (window.scrollY < 700) {
+        arrowUp.classList.add('arrow__up_hiden');
+      }
+  });
 
-  const arrowLink = document.querySelectorAll('.arrow__link[data-goto]');
+  arrowUp.addEventListener('click', () => {
+      window.scrollTo(0,0);
+  });
 
-if ( arrowLink.length > 0) {
-    arrowLink.forEach (arrow => {
-        arrow.addEventListener('click', onMenuLinkClick);
-    });
-
-    function onMenuLinkClick(e) {
-        const arrow = e.target;
-
-        if (arrow.dataset.goto && document.querySelector(arrow.dataset.goto)) {
-            const gotoBlock = document.querySelector(arrow.dataset.goto);
-            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
-            
-            window.scrollTo({
-                top: gotoBlockValue,
-                behavior: 'smooth'
-            });
-            e.preventDefault();
-        }
-    }
-}
