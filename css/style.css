@@ -1228,7 +1228,7 @@ body.lock {
     height: 100%;
     padding: 100px 0 0 0;
     background-color: #171C8F;
-    background: url("../../img/Block_01/Back-iPad.jpg") 0 0/cover no-repeat;
+    background: url("../img/Block_01/Back-iPad.jpg") 0 0/cover no-repeat;
     z-index: 12;
     overflow: auto;
   }
